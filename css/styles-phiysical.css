@@ -30,6 +30,9 @@
     --gray10: #616161;
 
 }
+html{
+    scroll-behavior: smooth;
+}
 
 
 body {
@@ -45,7 +48,13 @@ a {
 
 header {
     font-size: 14px;
+    width: 188px;
     color: var(--gray10);
+    position: absolute;
+    top: 64px;
+    left: -232px;
+
+
 }
 
 header a {
@@ -59,14 +68,17 @@ header a:hover {
 
 nav details summary {
     font-weight: bold;
+    line-height:24px;
+}
+header li{
+    margin-bottom:16px ;
 }
 
 h1 {
     font-size: 3.75em;
     margin-top: 64px;
     margin-bottom: 16px;
-
-
+    font-weight: normal;
 
 }
 
@@ -85,8 +97,6 @@ h2 {
     font-size: 2em;
     margin: 64px 0 40px;
     font-weight: normal;
-
-
 }
 
 h3 {
@@ -94,6 +104,9 @@ h3 {
     margin-top: 16px;
     margin-bottom: 24px;
     font-weight: normal;
+    position: sticky;
+    top: 0;
+    background-color: white;
 
 
 }
@@ -120,6 +133,14 @@ blockquote span {
 blockquote span p::before {
     content: "-";
 }
+.header{
+    position: sticky;
+    top: 0;
+}
+.header-content{
+
+    position: relative;
+}
 
 .main {
    /* border: 1px solid red;*/
@@ -130,7 +151,7 @@ blockquote span p::before {
 }
 .main-content {
     background-color: white;
-    padding: 20px;
+
 }
 /*
 .elemento1 {
@@ -164,6 +185,7 @@ blockquote span p::before {
 
 .section-content {
     margin-top: 164px;
+
 }
 
 .section-content:first-of-type {
@@ -192,7 +214,7 @@ blockquote span p::before {
 
 .section-content h3 {
     counter-increment: titlelist;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
 }
 
 .section-content h3::before {
@@ -200,11 +222,14 @@ blockquote span p::before {
 }
 
 .section-content h3::after {
-    content: "";
-    width: 32px;
+    content: '';
+    width: 80px;
     height: 4px;
     background: var(--gray30);
     display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
 
 }
