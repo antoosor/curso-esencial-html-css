@@ -25,57 +25,82 @@
 */
 :root{
     font-size: 16px;
-    --gray30:#212121;
-    --gray20:#212429;
-    --gray10:#616161;
+    --white:white;
+    --white20:#A5A3A5;
+    --white10:#3A3539;
     
 }
 
 body{   
 
-color: var(--gray30);
-font-family: "Roboto", sans-serif;
+color: var(--white);
+font-family: "Nunito", sans-serif;
+background: #251F24;
+;
 }
 a{
-color:var(--gray30)
+color:var(--white)
 }
 header{ 
     font-size: 14px;
-    color:var(--gray10);
+    color:var(--white);
+}
+header li{
+    color: var(--white20);
 }
 header a {
-    color: var(--gray10);
+    color: var(--white20);
     text-decoration: none;
 }
 header a:hover{
-    color: var(--gray30);
+    color: var(--white);
 }
 nav details summary{
     font-weight: bold;
 }
+h1,h2{
+    font-weight:normal;
+}
 h1{
     font-size: 3.75em;
+    margin-block-start:64px;
+    margin-block-end: 16px;
+    /*font-weight: normal;*/
 }
 h2{ 
     font-size: 2em;
+    margin-block: 40px;
+    /*font-weight:normal*/
  
 }
 h3{
     font-size: 1.5em;
-
+    font-weight:600;
+    margin-block:16px;
+    /*font-weight:normal*/
 }
-
+hr{
+    margin-block:40px;
+    border-color: #616161;
+}
 pre{
-background: #FEC62E;
+background: var(--white10);
     ;
 }
+p{
+    color: var(--white20);
+}
 .hero{
-    background-image:linear-gradient(to top, rgba(255, 255, 255, 0.3) 0, transparent ), url(./images/patron.png);
+    background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
     /*background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     */
     height: 350px;
+}
+.section-content img{
+    margin-block-start:40px;
+    display: block;
 }
 .section-content{
     counter-reset: titleList;
@@ -84,14 +109,22 @@ background: #FEC62E;
     counter-increment: titlelist;
 }
 .section-content h3::before{
-content:counter(titlelist,decimal)
+content:counter(titlelist,decimal)". ";
     }
 .section-content h3::after{
 content: "";
 width: 32px;
 height: 4px;
-background: var(--gray30);
+background: var(--white);
 display: inline-block;
 
-
+}
+blockquote{
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background: var(--white10);
+    border-radius: 8px;
+}
+.main hr{
+    display: none;
 }
