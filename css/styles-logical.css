@@ -41,12 +41,27 @@ background: #251F24;
 a{
 color:var(--white)
 }
+.header{
+    position: sticky;
+    inset-block-start: 0;
+    inset-block-start:-46px ;
+
+}
+.header-content{
+    position: relative;
+    inset-block-start: 65px;
+}
 header{ 
     font-size: 14px;
     color:var(--white);
+    position:  absolute;
+
+    inset-inline-start: -208px;
+    inline-size:188px ;
 }
 header li{
     color: var(--white20);
+    margin-block-end: 16px;
 }
 header a {
     color: var(--white20);
@@ -85,7 +100,16 @@ hr{
 }
 pre{
 background: var(--white10);
-    ;
+padding: 40px;
+overflow: auto;
+border-radius: 8px;
+border:  10px solid #5551ff;
+box-shadow: -10px 10px 0 0 #ABAAf6;
+margin-block-end: 30px;
+border-start-start-radius: 10px;
+border-start-end-radius: 10px;
+border-end-start-radius: 10px;
+border-end-end-radius: 10px;
 }
 p{
     color: var(--white20);
@@ -101,6 +125,7 @@ p{
 .section-content img{
     margin-block-start:40px;
     display: block;
+    max-inline-size: 100%;
 }
 .section-content{
     counter-reset: titleList;
@@ -111,20 +136,44 @@ p{
 .section-content h3::before{
 content:counter(titlelist,decimal)". ";
     }
-.section-content h3::after{
+/*.section-content h3::after{
 content: "";
 width: 32px;
 height: 4px;
 background: var(--white);
 display: inline-block;
 
-}
+}*/
 blockquote{
     margin-block-start: 80px;
     margin-block-end: 63px;
     background: var(--white10);
     border-radius: 8px;
+    padding-inline-start: 24px;
+    padding-inline-end: 24px;
+    padding-block-start:24px;
+    padding-block-end: 24px;
+    line-height: 32px;
+    font-size:24px;
+
+}
+blockquote p {  
+    color: var(--white);
 }
 .main hr{
     display: none;
+
+}
+.main{
+   
+}
+.wrapper{
+    
+    max-inline-size: 902px;
+    margin: auto;
+
+}
+.main-content{
+  padding-inline: 16px;
+
 }
